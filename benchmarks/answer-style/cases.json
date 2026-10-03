@@ -1,0 +1,146 @@
+[
+  {
+    "id": "GOOGLE-N01",
+    "contextId": "google-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEUTRAL",
+    "scenario": "Người dùng hỏi cách xử lý mã xác minh Gmail, diễn đạt bình tĩnh.",
+    "question": "Mình không nhận được mã xác minh Gmail trên email khôi phục. Mình nên kiểm tra bước nào trước?"
+  },
+  {
+    "id": "GOOGLE-N02",
+    "contextId": "google-recovery-username",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEUTRAL",
+    "scenario": "Người dùng quên địa chỉ Gmail và cần hướng dẫn tự phục vụ.",
+    "question": "Mình quên địa chỉ Gmail cá nhân. Có thể tự tìm lại tên đăng nhập bằng thông tin nào?"
+  },
+  {
+    "id": "GOOGLE-P01",
+    "contextId": "google-recovery-device",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng đã tìm được trang khôi phục và hỏi bước kế tiếp.",
+    "question": "Cảm ơn, mình đã tìm được trang khôi phục tài khoản Google. Sau đó nên chuẩn bị gì để xác minh?"
+  },
+  {
+    "id": "GOOGLE-P02",
+    "contextId": "google-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng đã nhận được mã và muốn biết cách dùng an toàn.",
+    "question": "Thanks, mình đã nhận được mã khôi phục Gmail. Mình cần nhập mã ở đâu để không lộ thông tin?"
+  },
+  {
+    "id": "GOOGLE-M01",
+    "contextId": "google-recovery-device",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEGATIVE",
+    "scenario": "Luồng khôi phục lặp lại nhiều lần khiến người dùng nản.",
+    "question": "Mình thử khôi phục Gmail bốn lần mà lần nào cũng quay về câu hỏi đầu tiên. Thật nản; giờ mình còn thử được gì?"
+  },
+  {
+    "id": "GOOGLE-M02",
+    "contextId": "google-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEGATIVE",
+    "scenario": "Người dùng thất vọng vì không nhận mã sau nhiều lần thử.",
+    "question": "Tôi đã yêu cầu mã xác minh khi khôi phục Gmail nhiều lần nhưng vẫn không nhận được, việc này rất phiền. Tôi nên kiểm tra gì tiếp?"
+  },
+  {
+    "id": "SOFTWARE-N01",
+    "contextId": "software-install-blocked",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Máy công ty yêu cầu quyền cài đặt; người dùng hỏi đúng quy trình.",
+    "question": "Làm sao để xử lý đúng quy trình khi trình cài Git trên máy công ty yêu cầu quyền quản trị?"
+  },
+  {
+    "id": "SOFTWARE-N02",
+    "contextId": "software-os",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Người dùng hỏi cách chọn gói phần mềm theo hệ điều hành.",
+    "question": "Mình dùng Windows 11 và muốn cài một ứng dụng mới. Làm thế nào để chọn đúng phiên bản và nguồn tải?"
+  },
+  {
+    "id": "SOFTWARE-P01",
+    "contextId": "software-publisher",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng cảm ơn, đã tìm được trang tải và hỏi cách xác minh.",
+    "question": "Cảm ơn, mình đã tìm thấy trang tải Git. Làm thế nào để kiểm tra nhà phát hành trước khi cài?"
+  },
+  {
+    "id": "SOFTWARE-P02",
+    "contextId": "software-os",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng hài lòng với hướng dẫn và muốn hiểu lý do của một bước.",
+    "question": "Hướng dẫn chọn phiên bản theo hệ điều hành rất dễ hiểu, cảm ơn. Vì sao nên dùng đúng gói dành cho Windows 11?"
+  },
+  {
+    "id": "SOFTWARE-M01",
+    "contextId": "software-install-blocked",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Quyền cài đặt bị chặn; người dùng bực vì bị chuyển vòng.",
+    "question": "Làm sao tiếp tục an toàn khi bộ cài VPN báo thiếu quyền quản trị? Tôi đã hỏi hai lần mà cứ bị chuyển vòng, rất bực."
+  },
+  {
+    "id": "SOFTWARE-M02",
+    "contextId": "software-publisher",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Người dùng thất vọng vì không xác định được nguồn tải an toàn.",
+    "question": "Tôi tải nhầm hai gói cài đặt khác nhau rồi, hướng dẫn chung không giúp gì và tôi khá thất vọng. Làm sao xác định nguồn đúng mà không đoán link?"
+  },
+  {
+    "id": "GENERAL-N01",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Lỗi VPN kỹ thuật được mô tả bình tĩnh.",
+    "question": "How do I describe a technical error when I do not know its cause?"
+  },
+  {
+    "id": "GENERAL-N02",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Cuộc họp sắp bắt đầu nhưng người dùng chỉ hỏi bước kỹ thuật đầu tiên.",
+    "question": "Cuộc họp bắt đầu sau 15 phút. Mình nên ghi thông tin nào vào yêu cầu để người hỗ trợ hiểu sự cố nhanh?"
+  },
+  {
+    "id": "GENERAL-P01",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng đã khắc phục được âm thanh và cảm ơn.",
+    "question": "Cảm ơn, mình đã mô tả lỗi rõ hơn và nhận được hướng dẫn phù hợp. Lần sau nên ghi thông tin nào để được hỗ trợ nhanh?"
+  },
+  {
+    "id": "GENERAL-P02",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng thấy hướng dẫn dễ hiểu và hỏi cách mô tả lỗi lần sau.",
+    "question": "Thanks, I understand how to describe an error now. What personal details should I leave out when asking for help?"
+  },
+  {
+    "id": "GENERAL-M01",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Lỗi Teams vẫn xảy ra sau nhiều lần thử, người dùng bực.",
+    "question": "Tôi đã hỏi cách mô tả lỗi hai lần nhưng vẫn nhận hướng dẫn chung chung; thật bực. Làm sao trình bày rõ hơn để được hướng dẫn đúng?"
+  },
+  {
+    "id": "GENERAL-M02",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "VPN rớt liên tục và hướng dẫn trước đó không giải quyết được.",
+    "question": "Tôi đã trình bày vấn đề hai lần mà vẫn bị yêu cầu kể lại từ đầu, mất cả buổi rồi, quá phiền. Làm sao viết yêu cầu rõ hơn?"
+  }
+]

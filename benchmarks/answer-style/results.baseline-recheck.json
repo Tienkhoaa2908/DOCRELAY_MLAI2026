@@ -1,0 +1,240 @@
+{
+  "createdAtUtc": "2026-10-03T09:15:58.420Z",
+  "dataset": {
+    "path": "benchmarks/answer-style/cases.json",
+    "sha256": "ff662cbeccf7bd4c1e144780304e37dd2b1317602a8e1f19bda0b461f7651169",
+    "count": 18,
+    "expectedSentimentCounts": {
+      "NEGATIVE": 6,
+      "NEUTRAL": 6,
+      "POSITIVE": 6
+    },
+    "syntheticOnly": true
+  },
+  "setup": {
+    "offline": true,
+    "model": null,
+    "expectedApiCalls": 0,
+    "webSearchCalls": 0,
+    "apiStorage": "store=false",
+    "independentHumanStyleReview": "not performed"
+  },
+  "localRuleBaseline": {
+    "accuracy": 0.7777777777777778,
+    "macroF1": 0.75,
+    "confusionMatrix": {
+      "NEGATIVE": {
+        "NEGATIVE": 2,
+        "NEUTRAL": 4,
+        "POSITIVE": 0
+      },
+      "NEUTRAL": {
+        "NEGATIVE": 0,
+        "NEUTRAL": 6,
+        "POSITIVE": 0
+      },
+      "POSITIVE": {
+        "NEGATIVE": 0,
+        "NEUTRAL": 0,
+        "POSITIVE": 6
+      }
+    },
+    "perLabel": {
+      "NEGATIVE": {
+        "precision": 1,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "NEUTRAL": {
+        "precision": 0.6,
+        "recall": 1,
+        "f1": 0.7499999999999999
+      },
+      "POSITIVE": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    "predictions": [
+      {
+        "id": "GOOGLE-N01",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "GOOGLE-N02",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "GOOGLE-P01",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "GOOGLE-P02",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "thanks"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "GOOGLE-M01",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "GOOGLE-M02",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "SOFTWARE-N01",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "SOFTWARE-N02",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "SOFTWARE-P01",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "SOFTWARE-P02",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on",
+          "de hieu"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "SOFTWARE-M01",
+        "expected": "NEGATIVE",
+        "label": "NEGATIVE",
+        "positiveCues": [],
+        "negativeCues": [
+          "rat buc"
+        ],
+        "predicted": "NEGATIVE"
+      },
+      {
+        "id": "SOFTWARE-M02",
+        "expected": "NEGATIVE",
+        "label": "NEGATIVE",
+        "positiveCues": [],
+        "negativeCues": [
+          "that vong"
+        ],
+        "predicted": "NEGATIVE"
+      },
+      {
+        "id": "GENERAL-N01",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "GENERAL-N02",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "GENERAL-P01",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "GENERAL-P02",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "thanks"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "GENERAL-M01",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "GENERAL-M02",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      }
+    ]
+  },
+  "variants": {
+    "current_prompt": {
+      "status": "not_run_offline_mode",
+      "callsCompleted": 0,
+      "answers": []
+    },
+    "infer_tone_in_prompt": {
+      "status": "not_run_offline_mode",
+      "callsCompleted": 0,
+      "answers": []
+    },
+    "prompt_plus_local_rules": {
+      "status": "not_run_offline_mode",
+      "callsCompleted": 0,
+      "answers": []
+    }
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "createdAtUtc": "2026-10-03T09:35:47.129Z",
+  "dataset": {
+    "path": "benchmarks/answer-style/cases.heldout.json",
+    "split": "heldout",
+    "sha256": "fce18b3a0f7ca568224c2affae8fd01fd4a7f3fbc0739a0555d6180151940bec",
+    "count": 24,
+    "expectedSentimentCounts": {
+      "NEGATIVE": 8,
+      "NEUTRAL": 8,
+      "POSITIVE": 8
+    },
+    "syntheticOnly": true
+  },
+  "setup": {
+    "offline": true,
+    "model": null,
+    "expectedApiCalls": 0,
+    "webSearchCalls": 0,
+    "apiStorage": "store=false",
+    "independentHumanStyleReview": "not performed",
+    "variantsSentInRandomOrder": true
+  },
+  "localRuleBaseline": {
+    "accuracy": 0.5416666666666666,
+    "macroF1": 0.5145868624129494,
+    "coverage": 1,
+    "confidence": "not_available_for_phrase_rules",
+    "confusionMatrix": {
+      "NEGATIVE": {
+        "NEGATIVE": 2,
+        "NEUTRAL": 4,
+        "POSITIVE": 2
+      },
+      "NEUTRAL": {
+        "NEGATIVE": 1,
+        "NEUTRAL": 7,
+        "POSITIVE": 0
+      },
+      "POSITIVE": {
+        "NEGATIVE": 0,
+        "NEUTRAL": 4,
+        "POSITIVE": 4
+      }
+    },
+    "perLabel": {
+      "NEGATIVE": {
+        "precision": 0.6666666666666666,
+        "recall": 0.25,
+        "f1": 0.36363636363636365
+      },
+      "NEUTRAL": {
+        "precision": 0.4666666666666667,
+        "recall": 0.875,
+        "f1": 0.608695652173913
+      },
+      "POSITIVE": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285715
+      }
+    },
+    "inference": {
+      "totalLatencyMs": 0.505,
+      "p50LatencyMs": 0.013,
+      "p95LatencyMs": 0.042,
+      "classifierSourceBytes": 1862,
+      "modelArtifactBytes": 0,
+      "processHeapDeltaBytes": 241040,
+      "processRssDeltaBytes": 315392,
+      "memoryNote": "Single-process before/after snapshots; not peak or isolated classifier memory."
+    },
+    "predictions": [
+      {
+        "id": "H-NEU-01",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEU-02",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEU-03",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEU-04",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEU-05",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEU-06",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEU-07",
+        "expected": "NEUTRAL",
+        "label": "NEGATIVE",
+        "positiveCues": [],
+        "negativeCues": [
+          "useless"
+        ],
+        "predicted": "NEGATIVE"
+      },
+      {
+        "id": "H-NEU-08",
+        "expected": "NEUTRAL",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-POS-01",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "H-POS-02",
+        "expected": "POSITIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-POS-03",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "H-POS-04",
+        "expected": "POSITIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-POS-05",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "appreciate"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "H-POS-06",
+        "expected": "POSITIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-POS-07",
+        "expected": "POSITIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "H-POS-08",
+        "expected": "POSITIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEG-01",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEG-02",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEG-03",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEG-04",
+        "expected": "NEGATIVE",
+        "label": "NEUTRAL",
+        "positiveCues": [],
+        "negativeCues": [],
+        "predicted": "NEUTRAL"
+      },
+      {
+        "id": "H-NEG-05",
+        "expected": "NEGATIVE",
+        "label": "NEGATIVE",
+        "positiveCues": [],
+        "negativeCues": [
+          "frustrat"
+        ],
+        "predicted": "NEGATIVE"
+      },
+      {
+        "id": "H-NEG-06",
+        "expected": "NEGATIVE",
+        "label": "NEGATIVE",
+        "positiveCues": [],
+        "negativeCues": [
+          "qua met moi"
+        ],
+        "predicted": "NEGATIVE"
+      },
+      {
+        "id": "H-NEG-07",
+        "expected": "NEGATIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "cam on"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      },
+      {
+        "id": "H-NEG-08",
+        "expected": "NEGATIVE",
+        "label": "POSITIVE",
+        "positiveCues": [
+          "huu ich"
+        ],
+        "negativeCues": [],
+        "predicted": "POSITIVE"
+      }
+    ]
+  },
+  "variants": {
+    "current_prompt": {
+      "status": "not_run_offline_mode",
+      "callsCompleted": 0,
+      "answers": []
+    },
+    "infer_tone_in_prompt": {
+      "status": "not_run_offline_mode",
+      "callsCompleted": 0,
+      "answers": []
+    },
+    "prompt_plus_local_rules": {
+      "status": "not_run_offline_mode",
+      "callsCompleted": 0,
+      "answers": []
+    }
+  }
+}

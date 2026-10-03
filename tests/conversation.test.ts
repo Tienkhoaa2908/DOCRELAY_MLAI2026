@@ -12,6 +12,11 @@ import {
 } from "@/lib/conversation-model";
 import { rankKnowledge } from "@/lib/support-knowledge";
 import { knowledgeSeed } from "@/domain/knowledge";
+import {
+  conversationAnswerInstructions,
+  responseStyleInstructions,
+} from "@/domain/conversation-answer-prompt";
+import type { ModelCall } from "@/lib/support-model";
 import type { SupportInput } from "@/domain/contracts";
 const input = (rawText: string): SupportInput => ({
   rawText,
@@ -104,22 +109,34 @@ it.each(["unavailable", "invalid"] as const)(
   },
 );
 it("calls the answer model once with retrieved evidence and validates model labels without authority", async () => {
-  const run = vi.fn(async () => ({
-    label: "IDENTITY",
-    text: "Mình là trợ lý VNG Support, có thể hướng dẫn bạn và giải đáp câu hỏi.",
-    knowledgeIds: ["support-kb-v2-identity"],
-    evidence: [
-      {
-        knowledgeId: "support-kb-v2-identity",
-        quote: knowledgeSeed
-          .find((row) => row._id === "support-kb-v2-identity")!
-          .answer.slice(0, 80),
-      },
-    ],
-  }));
+  const run = vi.fn(async (call: ModelCall) => {
+    expect(call.purpose).toBe("assistance");
+    return {
+      label: "IDENTITY",
+      text: "Mình là trợ lý VNG Support, có thể hướng dẫn bạn và giải đáp câu hỏi.",
+      knowledgeIds: ["support-kb-v2-identity"],
+      evidence: [
+        {
+          knowledgeId: "support-kb-v2-identity",
+          quote: knowledgeSeed
+            .find((row) => row._id === "support-kb-v2-identity")!
+            .answer.slice(0, 80),
+        },
+      ],
+    };
+  });
   const row = await submitSupport(input("bạn tên gì"), { run });
   expect(run).toHaveBeenCalledOnce();
-  expect(run.mock.calls[0]).toBeDefined();
+  const modelCall = run.mock.calls[0]?.[0];
+  expect(modelCall).toBeDefined();
+  expect(modelCall?.instructions).toContain(conversationAnswerInstructions);
+  expect(modelCall?.instructions).toContain(responseStyleInstructions);
+  expect(modelCall?.responseSchema).toMatchObject({
+    type: "object",
+    additionalProperties: false,
+    required: ["label", "text", "knowledgeIds", "evidence"],
+  });
+  expect(JSON.parse(modelCall!.data)).not.toHaveProperty("responseStyle");
   expect(row.assistance[0].answer?.knowledgeIds).toContain(
     "support-kb-v2-identity",
   );

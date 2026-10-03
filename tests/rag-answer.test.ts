@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { beforeEach, afterEach, expect, it, vi } from "vitest";
 import {
   createConversationAnswer,
@@ -8,10 +9,13 @@ import {
   answerCacheKey,
   withAnswerCache,
   resetAnswerCacheForTest,
+  CONVERSATION_ANSWER_CACHE_VERSION,
 } from "@/lib/answer-cache";
 import { analyze, submitSupport } from "@/services/support";
 import { resetSupportTestStore } from "@/lib/support-repository";
 import { knowledgeSeed } from "@/domain/knowledge";
+import { POLICY_VERSION } from "@/domain/policy-source";
+import { normalize } from "@/domain/text";
 import type { SupportInput } from "@/domain/contracts";
 const input = (rawText: string): SupportInput => ({
   rawText,
@@ -239,6 +243,30 @@ it("never shares personalized, follow-up, or override questions in the public an
       "two",
     ),
   );
+});
+it("does not reuse answers cached before the response-style prompt version", () => {
+  const context = {
+    label: "IDENTITY" as const,
+    question: "bạn tên gì",
+    ignoredOverride: false,
+  };
+  const model = "test-model";
+  const previousKey = createHash("sha256")
+    .update(
+      JSON.stringify([
+        "answer-v3-evidence-workflow",
+        normalize(context.question),
+        context.label,
+        model,
+        POLICY_VERSION,
+        knowledgeSeed,
+      ]),
+    )
+    .digest("hex");
+  expect(CONVERSATION_ANSWER_CACHE_VERSION).toBe(
+    "answer-v4-evidence-workflow-response-style",
+  );
+  expect(answerCacheKey(context, model)).not.toBe(previousKey);
 });
 it("coalesces same-process cache misses and expires entries without resetting the budget", async () => {
   vi.stubEnv("AI_PROVIDER", "openai");

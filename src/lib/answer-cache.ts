@@ -6,6 +6,8 @@ import { POLICY_VERSION } from "@/domain/policy-source";
 import type { ConversationContext } from "@/domain/conversation";
 import { supportDatabase } from "./support-repository";
 const ttlMs = 60 * 60_000;
+export const CONVERSATION_ANSWER_CACHE_VERSION =
+  "answer-v4-evidence-workflow-response-style";
 const schema = z.object({
   value: z.unknown(),
   createdAt: z.string().datetime(),
@@ -24,7 +26,7 @@ export function answerCacheKey(context: ConversationContext, model: string) {
   return createHash("sha256")
     .update(
       JSON.stringify([
-        "answer-v3-evidence-workflow",
+        CONVERSATION_ANSWER_CACHE_VERSION,
         text,
         context.label,
         model,

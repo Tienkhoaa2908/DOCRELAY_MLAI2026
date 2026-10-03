@@ -1,0 +1,58 @@
+{
+  "google-recovery-code": {
+    "_id": "support-kb-v1-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "title": "Không nhận được mã xác minh Google",
+    "answer": "Kiểm tra thư rác của email khôi phục. Nếu Google yêu cầu mã ở nơi bạn không truy cập được, chọn thử cách khác nếu có. Chỉ nhập mã trên trang Google chính thức; không gửi mã vào chat. Bạn đang chờ mã qua email hay điện thoại?",
+    "sources": [{"title": "Google: Mẹo xác minh chủ tài khoản", "url": "https://support.google.com/accounts/answer/7299973?hl=vi", "scope": "public", "checkedAt": "2026-09-21"}]
+  },
+  "google-recovery-username": {
+    "_id": "support-kb-v1-recovery-username",
+    "label": "GOOGLE_RECOVERY",
+    "title": "Quên địa chỉ Gmail hoặc tên đăng nhập",
+    "answer": "Nếu quên địa chỉ Gmail, dùng mục tìm tên đăng nhập trong hướng dẫn Google. Chuẩn bị số điện thoại hoặc email khôi phục và họ tên đã đăng ký; nhập chúng trực tiếp trên Google. Bạn quên địa chỉ email hay chỉ quên mật khẩu?",
+    "sources": [{"title": "Google: Khôi phục tài khoản", "url": "https://support.google.com/accounts/answer/7682439?hl=vi", "scope": "public", "checkedAt": "2026-09-21"}]
+  },
+  "google-recovery-device": {
+    "_id": "support-kb-v1-recovery-device",
+    "label": "GOOGLE_RECOVERY",
+    "title": "Google chưa xác minh được chủ tài khoản",
+    "answer": "Thử khôi phục bằng thiết bị, trình duyệt và nơi bạn thường đăng nhập. Trả lời các câu hỏi xác minh trực tiếp trên Google. Đây là gợi ý tăng khả năng xác minh, không bảo đảm lấy lại được tài khoản. Bạn còn thiết bị từng đăng nhập không?",
+    "sources": [{"title": "Google: Mẹo xác minh chủ tài khoản", "url": "https://support.google.com/accounts/answer/7299973?hl=vi", "scope": "public", "checkedAt": "2026-09-21"}]
+  },
+  "software-install-blocked": {
+    "_id": "support-kb-v1-software-install-blocked",
+    "label": "SOFTWARE_GUIDE",
+    "title": "Trình cài đặt yêu cầu quyền quản trị",
+    "answer": "Dừng tại màn hình yêu cầu quyền nếu bạn chưa có quyền hợp lệ. Ghi tên phần mềm và thông báo đang thấy; kiểm tra danh mục ứng dụng được công ty cho phép. Mình có thể giúp xác định gói cài phù hợp, nhưng không hướng dẫn vượt qua kiểm soát hay tự cấp quyền.",
+    "sources": []
+  },
+  "software-os": {
+    "_id": "support-kb-v1-software-os",
+    "label": "SOFTWARE_GUIDE",
+    "title": "Chọn phần mềm theo hệ điều hành",
+    "answer": "Ghi tên chương trình và hệ điều hành, sau đó đối chiếu mục yêu cầu hệ thống trên trang nhà phát hành. Chọn đúng phiên bản dành cho máy bạn; không chạy gói không rõ nguồn. Bạn đang dùng Windows, macOS hay Linux và phiên bản nào?",
+    "sources": []
+  },
+  "software-publisher": {
+    "_id": "support-kb-v1-software-publisher",
+    "label": "SOFTWARE_GUIDE",
+    "title": "Kiểm tra nhà phát hành và nguồn tải",
+    "answer": "Tìm tên nhà phát hành từ tài liệu của ứng dụng, rồi kiểm tra tên miền và thông tin gói tải. Tránh nút tải quảng cáo hoặc link do người lạ gửi. Nếu chưa xác định được chương trình, mình cần tên chính xác để hướng dẫn tiếp; không đoán đường dẫn tải.",
+    "sources": []
+  },
+  "general-error": {
+    "_id": "support-kb-v1-explain-error",
+    "label": "GENERAL_GUIDE",
+    "title": "Mô tả lỗi không cần thuật ngữ kỹ thuật",
+    "answer": "Hãy nói bạn muốn làm gì, đã bấm tới bước nào, điều gì xảy ra và từ khi nào. Nếu có thông báo lỗi, chép phần không chứa dữ liệu cá nhân hoặc mã bí mật. Bạn không cần tự đoán nguyên nhân; mình sẽ hỏi thêm từng phần còn thiếu.",
+    "sources": [{"title": "VNG Support: hướng dẫn demo đã review", "url": "https://github.com/dakiemdarktharr/DOCRELAY_MLAI2026", "scope": "project", "checkedAt": "2026-09-21"}]
+  },
+  "general-browser": {
+    "_id": "support-kb-v1-browser-help",
+    "label": "GENERAL_GUIDE",
+    "title": "Trang web không tải trong trình duyệt",
+    "answer": "Kiểm tra xem các trang khác có mở được không, rồi thử tải lại trang một lần và ghi thông báo lỗi. Có thể thử cửa sổ riêng tư để phân biệt lỗi phiên đăng nhập; thao tác này không thay cấu hình hệ thống. Không bỏ qua cảnh báo chứng chỉ. Bạn thấy lỗi trên một trang hay tất cả trang?",
+    "sources": [{"title": "VNG Support: hướng dẫn demo đã review", "url": "https://github.com/dakiemdarktharr/DOCRELAY_MLAI2026", "scope": "project", "checkedAt": "2026-09-21"}]
+  }
+}

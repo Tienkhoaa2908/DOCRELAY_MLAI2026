@@ -1,0 +1,194 @@
+[
+  {
+    "id": "H-NEU-01",
+    "contextId": "google-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEUTRAL",
+    "scenario": "Bình tĩnh hỏi mã xác minh chưa đến.",
+    "question": "Làm sao khôi phục Gmail nếu OTP gửi tới email dự phòng chưa đến?"
+  },
+  {
+    "id": "H-NEU-02",
+    "contextId": "google-recovery-username",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEUTRAL",
+    "scenario": "Quên địa chỉ Gmail nhưng không thể hiện cảm xúc.",
+    "question": "Minh quen dia chi Gmail ca nhan. Co the dung email du phong de tim lai khong?"
+  },
+  {
+    "id": "H-NEU-03",
+    "contextId": "software-install-blocked",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Hỏi quy trình cài phần mềm khi thiếu quyền quản trị.",
+    "question": "Làm sao cài Git đúng quy trình nếu máy công ty yêu cầu quyền quản trị?"
+  },
+  {
+    "id": "H-NEU-04",
+    "contextId": "software-os",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Hỏi chọn phiên bản phần mềm theo hệ điều hành.",
+    "question": "Tôi dùng Windows 11. Làm sao chọn đúng phiên bản của ứng dụng cần cài?"
+  },
+  {
+    "id": "H-NEU-05",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Mã lỗi VPN xuất hiện trước cuộc họp; thời hạn không hàm ý bực bội.",
+    "question": "Cuộc họp bắt đầu sau 15 phút. Mình nên ghi những thông tin nào khi mô tả một lỗi kỹ thuật?"
+  },
+  {
+    "id": "H-NEU-06",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Lỗi trình duyệt và giờ họp được nêu một cách trung tính.",
+    "question": "The browser returns HTTP 502 before my 10:00 meeting. What details should I share with IT?"
+  },
+  {
+    "id": "H-NEU-07",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Từ tiêu cực nằm trong câu trích dẫn, không phải cảm xúc người hỏi.",
+    "question": "Trong báo cáo có câu trích “This is useless”; còn lỗi của tôi là Chrome trả 502. Tôi nên ghi thêm thông tin nào?"
+  },
+  {
+    "id": "H-NEU-08",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEUTRAL",
+    "scenario": "Người hỏi bối rối nhưng không thể hiện bực bội hay khẩn cấp.",
+    "question": "Mình hơi rối sau khi đổi trình duyệt; làm thế nào ghi lại bước gặp lỗi?"
+  },
+  {
+    "id": "H-POS-01",
+    "contextId": "google-recovery-device",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "POSITIVE",
+    "scenario": "Đã khôi phục được tài khoản Google và cảm ơn.",
+    "question": "Cảm ơn, mình đã khôi phục được Gmail sau khi dùng thiết bị thường đăng nhập. Cần lưu ý gì tiếp theo?"
+  },
+  {
+    "id": "H-POS-02",
+    "contextId": "google-recovery-username",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "POSITIVE",
+    "scenario": "Đã tìm lại được địa chỉ Gmail và hỏi cách giữ an toàn.",
+    "question": "Tuyệt, mình tìm lại được địa chỉ Gmail rồi. Làm sao giữ thông tin khôi phục an toàn?"
+  },
+  {
+    "id": "H-POS-03",
+    "contextId": "software-publisher",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Cài Git thành công và cảm ơn hướng dẫn.",
+    "question": "Git đã cài xong từ đúng nguồn, cảm ơn hướng dẫn rõ ràng. Làm sao kiểm tra nhà phát hành lần sau?"
+  },
+  {
+    "id": "H-POS-04",
+    "contextId": "software-os",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng vui vì chọn được đúng gói theo hệ điều hành.",
+    "question": "Mình chọn được đúng gói Windows 11 và cài chạy ổn rồi. Làm sao kiểm tra phiên bản hiện tại?"
+  },
+  {
+    "id": "H-POS-05",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Trang web đã tải lại và lời hướng dẫn được đánh giá tích cực.",
+    "question": "The browser loads again after one session check. I appreciate the clear steps; what should I record if it happens again?"
+  },
+  {
+    "id": "H-POS-06",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Người dùng thấy nhẹ nhõm khi VPN kết nối lại.",
+    "question": "Lỗi đã biến mất sau bước kiểm tra, nhẹ cả người. Mình nên ghi lại thông tin nào nếu gặp lại?"
+  },
+  {
+    "id": "H-POS-07",
+    "contextId": "software-publisher",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "POSITIVE",
+    "scenario": "Đã tìm được nguồn tải chính thức và cảm ơn.",
+    "question": "Cảm ơn, mình đã tìm thấy trang tải chính thức của Git. Làm thế nào xác minh gói cài?"
+  },
+  {
+    "id": "H-POS-08",
+    "contextId": "google-recovery-device",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "POSITIVE",
+    "scenario": "Đã đăng nhập lại và muốn biết điều cần nhớ cho lần sau.",
+    "question": "Glad I can sign in to Google again. Which recovery step should I keep in mind next time?"
+  },
+  {
+    "id": "H-NEG-01",
+    "contextId": "google-recovery-device",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEGATIVE",
+    "scenario": "Luồng khôi phục lặp lại; người dùng nản lòng.",
+    "question": "Mình nhập đúng thông tin khôi phục nhưng Google vẫn đưa về trang đầu. Thật nản, mình còn cách nào an toàn?"
+  },
+  {
+    "id": "H-NEG-02",
+    "contextId": "google-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEGATIVE",
+    "scenario": "Mã xác minh Gmail cứ bị yêu cầu lại và người dùng mất kiên nhẫn.",
+    "question": "Gmail keeps asking for the same verification code while I try to recover the account. I'm running out of patience. What can I do now?"
+  },
+  {
+    "id": "H-NEG-03",
+    "contextId": "google-recovery-code",
+    "label": "GOOGLE_RECOVERY",
+    "sentiment": "NEGATIVE",
+    "scenario": "Chờ mã Gmail gần hết buổi sáng và thất vọng.",
+    "question": "Mình thử khôi phục cả buổi sáng mà mã Gmail chưa tới; việc này phiền thật. Tôi nên kiểm tra gì tiếp?"
+  },
+  {
+    "id": "H-NEG-04",
+    "contextId": "software-install-blocked",
+    "label": "SOFTWARE_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Yêu cầu cài Git bị chuyển vòng, người dùng bực bội.",
+    "question": "Làm sao cài Git đúng quy trình? Tôi cứ bị chuyển qua lại giữa các nhóm, bực thật."
+  },
+  {
+    "id": "H-NEG-05",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "VPN vẫn lỗi sau khi đã làm theo hướng dẫn; frustration viết bằng tiếng Anh.",
+    "question": "I followed the connection steps twice and the same error returns. This is getting frustrating; what should I try next?"
+  },
+  {
+    "id": "H-NEG-06",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Đã báo lỗi Chrome nhiều lần nhưng vẫn phải kể lại từ đầu.",
+    "question": "Tôi gửi ảnh lỗi Chrome ba lần mà vẫn bị yêu cầu gửi lại. Quá mệt mỏi; làm sao mô tả để không phải kể từ đầu?"
+  },
+  {
+    "id": "H-NEG-07",
+    "contextId": "general-error",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Cảm ơn nhưng lỗi VPN chưa hết; phần bực bội là trọng tâm.",
+    "question": "Cảm ơn phần hướng dẫn, nhưng cùng lỗi vẫn xuất hiện sau mỗi lần thử và mình bắt đầu bực. Nên mô tả gì tiếp theo?"
+  },
+  {
+    "id": "H-NEG-08",
+    "contextId": "general-browser",
+    "label": "GENERAL_GUIDE",
+    "sentiment": "NEGATIVE",
+    "scenario": "Chrome tiếp tục trả lỗi sau nhiều lần tải lại; người dùng không hài lòng.",
+    "question": "Tôi chưa thấy hướng dẫn hữu ích; cùng lỗi vẫn quay lại sau ba lần thử. Làm sao ghi yêu cầu để được hướng dẫn đúng?"
+  }
+]
