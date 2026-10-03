@@ -202,7 +202,7 @@ Build phải hoàn tất trước E2E. Để kiểm tra production build bằng 
 
 Ở commit `878448f`, kiểm tra **local** đạt 505 unit/integration tests (32 file), 11 kiểm tra guard Mongo và 89 E2E (45 desktop, 44 mobile; bỏ qua một bài quay video mobile). Lint, typecheck và build đạt. Đây là kết quả AI-assisted đã ghi cho commit đó, không phải bằng chứng hosted CI hoặc production hiện tại. Xem [phạm vi và kết quả kiểm tra UI](docs/UI-REVIEW-VNG.md). Lượt cập nhật README này chỉ kiểm tra tính khớp của tài liệu với CSV/code và các liên kết local; không chạy lại toàn bộ bộ kiểm thử ứng dụng.
 
-Xem thêm [hướng dẫn giám khảo](docs/JUDGE-ONBOARDING.md) và [hướng dẫn vận hành](RUNBOOK.md).
+Xem thêm [hướng dẫn giám khảo](docs/JUDGE-ONBOARDING.md), [hướng dẫn vận hành](RUNBOOK.md) và [benchmark sentiment chạy local](benchmarks/sentiment/README.md).
 
 ## Giới hạn bằng chứng và dữ liệu demo
 

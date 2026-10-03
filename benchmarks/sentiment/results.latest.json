@@ -1,0 +1,1529 @@
+{
+  "created_at_utc": "2026-10-02T21:33:35.107634+00:00",
+  "dataset": {
+    "file": "benchmarks/sentiment/cases.json",
+    "sha256": "8dd40a0576f69f309b95a62e27ad9874c7a67fcb77f8ea7fab0d28598a23d025",
+    "count": 60,
+    "label_counts": {
+      "NEUTRAL": 20,
+      "POSITIVE": 20,
+      "NEGATIVE": 20
+    },
+    "synthetic_only": true
+  },
+  "runtime": {
+    "python": "3.13.16",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "CPU",
+    "cpu_count": 12,
+    "torch_version": "2.14.1+cpu",
+    "transformers_version": "4.57.6",
+    "onnxruntime_version": "1.30.0",
+    "underthesea_version": "9.5.0"
+  },
+  "models": {
+    "phobert": {
+      "id": "wonrax/phobert-base-vietnamese-sentiment",
+      "revision": "9076a5896971b5d551588fe8a51c722c89731d36",
+      "license": "MIT",
+      "training_data": "30K e-commerce reviews (model card)",
+      "requires_word_segmentation": true
+    },
+    "visobert": {
+      "id": "5CD-AI/Vietnamese-Sentiment-visobert",
+      "revision": "d7738b85200272f10ba8b048d80236c8c582b581",
+      "license": "Not declared in the pinned model card",
+      "training_data": "Vietnamese sentiment datasets (see model card)",
+      "requires_word_segmentation": false
+    }
+  },
+  "limitations": [
+    "All cases were authored for this benchmark and are not a representative or independent production test set.",
+    "Sentiment describes tone; it does not determine urgency, risk, priority, or policy action.",
+    "Model scores are not calibrated confidence values."
+  ],
+  "results": {
+    "rules": {
+      "metrics": {
+        "accuracy": 0.7333333333333333,
+        "macro_f1": 0.737280640506447,
+        "negative_precision": 1.0,
+        "negative_recall": 0.65,
+        "per_label": {
+          "NEGATIVE": {
+            "precision": 1.0,
+            "recall": 0.65,
+            "f1": 0.787878787878788
+          },
+          "NEUTRAL": {
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          },
+          "POSITIVE": {
+            "precision": 1.0,
+            "recall": 0.55,
+            "f1": 0.7096774193548387
+          }
+        },
+        "confusion_matrix": {
+          "NEGATIVE": {
+            "NEGATIVE": 13,
+            "NEUTRAL": 7,
+            "POSITIVE": 0
+          },
+          "NEUTRAL": {
+            "NEGATIVE": 0,
+            "NEUTRAL": 20,
+            "POSITIVE": 0
+          },
+          "POSITIVE": {
+            "NEGATIVE": 0,
+            "NEUTRAL": 9,
+            "POSITIVE": 11
+          }
+        },
+        "errors": [
+          {
+            "id": "P02",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P03",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P07",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P08",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P11",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P16",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P17",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P19",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P20",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M02",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M04",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M06",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M08",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M15",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M16",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M18",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          }
+        ],
+        "error_count": 16
+      },
+      "latency": {
+        "p50_ms": 0.02,
+        "p95_ms": 0.03
+      },
+      "predictions": {
+        "N01": "NEUTRAL",
+        "N02": "NEUTRAL",
+        "N03": "NEUTRAL",
+        "N04": "NEUTRAL",
+        "N05": "NEUTRAL",
+        "N06": "NEUTRAL",
+        "N07": "NEUTRAL",
+        "N08": "NEUTRAL",
+        "N09": "NEUTRAL",
+        "N10": "NEUTRAL",
+        "N11": "NEUTRAL",
+        "N12": "NEUTRAL",
+        "N13": "NEUTRAL",
+        "N14": "NEUTRAL",
+        "N15": "NEUTRAL",
+        "N16": "NEUTRAL",
+        "N17": "NEUTRAL",
+        "N18": "NEUTRAL",
+        "N19": "NEUTRAL",
+        "N20": "NEUTRAL",
+        "P01": "POSITIVE",
+        "P02": "NEUTRAL",
+        "P03": "NEUTRAL",
+        "P04": "POSITIVE",
+        "P05": "POSITIVE",
+        "P06": "POSITIVE",
+        "P07": "NEUTRAL",
+        "P08": "NEUTRAL",
+        "P09": "POSITIVE",
+        "P10": "POSITIVE",
+        "P11": "NEUTRAL",
+        "P12": "POSITIVE",
+        "P13": "POSITIVE",
+        "P14": "POSITIVE",
+        "P15": "POSITIVE",
+        "P16": "NEUTRAL",
+        "P17": "NEUTRAL",
+        "P18": "POSITIVE",
+        "P19": "NEUTRAL",
+        "P20": "NEUTRAL",
+        "M01": "NEGATIVE",
+        "M02": "NEUTRAL",
+        "M03": "NEGATIVE",
+        "M04": "NEUTRAL",
+        "M05": "NEGATIVE",
+        "M06": "NEUTRAL",
+        "M07": "NEGATIVE",
+        "M08": "NEUTRAL",
+        "M09": "NEGATIVE",
+        "M10": "NEGATIVE",
+        "M11": "NEGATIVE",
+        "M12": "NEGATIVE",
+        "M13": "NEGATIVE",
+        "M14": "NEGATIVE",
+        "M15": "NEUTRAL",
+        "M16": "NEUTRAL",
+        "M17": "NEGATIVE",
+        "M18": "NEUTRAL",
+        "M19": "NEGATIVE",
+        "M20": "NEGATIVE"
+      },
+      "explanations": {
+        "N01": {
+          "positive": [],
+          "negative": []
+        },
+        "N02": {
+          "positive": [],
+          "negative": []
+        },
+        "N03": {
+          "positive": [],
+          "negative": []
+        },
+        "N04": {
+          "positive": [],
+          "negative": []
+        },
+        "N05": {
+          "positive": [],
+          "negative": []
+        },
+        "N06": {
+          "positive": [],
+          "negative": []
+        },
+        "N07": {
+          "positive": [],
+          "negative": []
+        },
+        "N08": {
+          "positive": [],
+          "negative": []
+        },
+        "N09": {
+          "positive": [],
+          "negative": []
+        },
+        "N10": {
+          "positive": [],
+          "negative": []
+        },
+        "N11": {
+          "positive": [],
+          "negative": []
+        },
+        "N12": {
+          "positive": [],
+          "negative": []
+        },
+        "N13": {
+          "positive": [],
+          "negative": []
+        },
+        "N14": {
+          "positive": [],
+          "negative": []
+        },
+        "N15": {
+          "positive": [],
+          "negative": []
+        },
+        "N16": {
+          "positive": [],
+          "negative": []
+        },
+        "N17": {
+          "positive": [],
+          "negative": []
+        },
+        "N18": {
+          "positive": [],
+          "negative": []
+        },
+        "N19": {
+          "positive": [],
+          "negative": []
+        },
+        "N20": {
+          "positive": [],
+          "negative": []
+        },
+        "P01": {
+          "positive": [
+            "cam on"
+          ],
+          "negative": []
+        },
+        "P02": {
+          "positive": [],
+          "negative": []
+        },
+        "P03": {
+          "positive": [],
+          "negative": []
+        },
+        "P04": {
+          "positive": [
+            "tuyet voi",
+            "hoat dong tot"
+          ],
+          "negative": []
+        },
+        "P05": {
+          "positive": [
+            "thanks",
+            "worked perfectly"
+          ],
+          "negative": []
+        },
+        "P06": {
+          "positive": [
+            "helpful",
+            "patient"
+          ],
+          "negative": []
+        },
+        "P07": {
+          "positive": [],
+          "negative": []
+        },
+        "P08": {
+          "positive": [],
+          "negative": []
+        },
+        "P09": {
+          "positive": [
+            "khong co gi de phan nan",
+            "xu ly tot"
+          ],
+          "negative": []
+        },
+        "P10": {
+          "positive": [
+            "appreciate"
+          ],
+          "negative": []
+        },
+        "P11": {
+          "positive": [],
+          "negative": []
+        },
+        "P12": {
+          "positive": [
+            "great job",
+            "working again"
+          ],
+          "negative": []
+        },
+        "P13": {
+          "positive": [
+            "cam on"
+          ],
+          "negative": []
+        },
+        "P14": {
+          "positive": [
+            "than thien",
+            "hieu qua",
+            "chuyen nghiep"
+          ],
+          "negative": []
+        },
+        "P15": {
+          "positive": [
+            "thanks",
+            "solved it"
+          ],
+          "negative": []
+        },
+        "P16": {
+          "positive": [],
+          "negative": []
+        },
+        "P17": {
+          "positive": [],
+          "negative": []
+        },
+        "P18": {
+          "positive": [
+            "awesome"
+          ],
+          "negative": []
+        },
+        "P19": {
+          "positive": [],
+          "negative": []
+        },
+        "P20": {
+          "positive": [],
+          "negative": []
+        },
+        "M01": {
+          "positive": [],
+          "negative": [
+            "rat buc"
+          ]
+        },
+        "M02": {
+          "positive": [],
+          "negative": []
+        },
+        "M03": {
+          "positive": [],
+          "negative": [
+            "te qua"
+          ]
+        },
+        "M04": {
+          "positive": [],
+          "negative": []
+        },
+        "M05": {
+          "positive": [],
+          "negative": [
+            "khong hai long",
+            "lien tuc bi chuyen"
+          ]
+        },
+        "M06": {
+          "positive": [],
+          "negative": []
+        },
+        "M07": {
+          "positive": [],
+          "negative": [
+            "buc minh"
+          ]
+        },
+        "M08": {
+          "positive": [],
+          "negative": []
+        },
+        "M09": {
+          "positive": [],
+          "negative": [
+            "useless"
+          ]
+        },
+        "M10": {
+          "positive": [],
+          "negative": [
+            "not happy"
+          ]
+        },
+        "M11": {
+          "positive": [],
+          "negative": [
+            "cho ca ngay",
+            "dung gui cau tra loi tu dong nua"
+          ]
+        },
+        "M12": {
+          "positive": [],
+          "negative": [
+            "qua met moi"
+          ]
+        },
+        "M13": {
+          "positive": [],
+          "negative": [
+            "disappointed",
+            "worse"
+          ]
+        },
+        "M14": {
+          "positive": [],
+          "negative": [
+            "phat cau"
+          ]
+        },
+        "M15": {
+          "positive": [],
+          "negative": []
+        },
+        "M16": {
+          "positive": [],
+          "negative": []
+        },
+        "M17": {
+          "positive": [],
+          "negative": [
+            "chan that"
+          ]
+        },
+        "M18": {
+          "positive": [],
+          "negative": []
+        },
+        "M19": {
+          "positive": [],
+          "negative": [
+            "phien phuc"
+          ]
+        },
+        "M20": {
+          "positive": [],
+          "negative": [
+            "that vong",
+            "rat lo"
+          ]
+        }
+      }
+    },
+    "phobert": {
+      "metrics": {
+        "accuracy": 0.5833333333333334,
+        "macro_f1": 0.5601532567049808,
+        "negative_precision": 0.6,
+        "negative_recall": 0.6,
+        "per_label": {
+          "NEGATIVE": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1": 0.6
+          },
+          "NEUTRAL": {
+            "precision": 0.6666666666666666,
+            "recall": 0.3,
+            "f1": 0.41379310344827586
+          },
+          "POSITIVE": {
+            "precision": 0.5483870967741935,
+            "recall": 0.85,
+            "f1": 0.6666666666666665
+          }
+        },
+        "confusion_matrix": {
+          "NEGATIVE": {
+            "NEGATIVE": 12,
+            "NEUTRAL": 0,
+            "POSITIVE": 8
+          },
+          "NEUTRAL": {
+            "NEGATIVE": 8,
+            "NEUTRAL": 6,
+            "POSITIVE": 6
+          },
+          "POSITIVE": {
+            "NEGATIVE": 0,
+            "NEUTRAL": 3,
+            "POSITIVE": 17
+          }
+        },
+        "errors": [
+          {
+            "id": "N01",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N04",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N05",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N09",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N10",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N12",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N13",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N14",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N15",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N16",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N17",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N18",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N19",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N20",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "P02",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P03",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P08",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M02",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M04",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M06",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M08",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M10",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M13",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M16",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M18",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          }
+        ],
+        "error_count": 25
+      },
+      "latency": {
+        "load_seconds": 0.3,
+        "first_inference_ms": 610.73,
+        "p50_ms": 37.95,
+        "p95_ms": 48.77
+      },
+      "checkpoint_bytes": 540069101,
+      "predictions": {
+        "N01": "NEGATIVE",
+        "N02": "NEUTRAL",
+        "N03": "NEUTRAL",
+        "N04": "NEGATIVE",
+        "N05": "NEGATIVE",
+        "N06": "NEUTRAL",
+        "N07": "NEUTRAL",
+        "N08": "NEUTRAL",
+        "N09": "POSITIVE",
+        "N10": "NEGATIVE",
+        "N11": "NEUTRAL",
+        "N12": "POSITIVE",
+        "N13": "POSITIVE",
+        "N14": "POSITIVE",
+        "N15": "NEGATIVE",
+        "N16": "NEGATIVE",
+        "N17": "POSITIVE",
+        "N18": "NEGATIVE",
+        "N19": "POSITIVE",
+        "N20": "NEGATIVE",
+        "P01": "POSITIVE",
+        "P02": "NEUTRAL",
+        "P03": "NEUTRAL",
+        "P04": "POSITIVE",
+        "P05": "POSITIVE",
+        "P06": "POSITIVE",
+        "P07": "POSITIVE",
+        "P08": "NEUTRAL",
+        "P09": "POSITIVE",
+        "P10": "POSITIVE",
+        "P11": "POSITIVE",
+        "P12": "POSITIVE",
+        "P13": "POSITIVE",
+        "P14": "POSITIVE",
+        "P15": "POSITIVE",
+        "P16": "POSITIVE",
+        "P17": "POSITIVE",
+        "P18": "POSITIVE",
+        "P19": "POSITIVE",
+        "P20": "POSITIVE",
+        "M01": "NEGATIVE",
+        "M02": "POSITIVE",
+        "M03": "NEGATIVE",
+        "M04": "POSITIVE",
+        "M05": "NEGATIVE",
+        "M06": "POSITIVE",
+        "M07": "NEGATIVE",
+        "M08": "POSITIVE",
+        "M09": "NEGATIVE",
+        "M10": "POSITIVE",
+        "M11": "NEGATIVE",
+        "M12": "NEGATIVE",
+        "M13": "POSITIVE",
+        "M14": "NEGATIVE",
+        "M15": "NEGATIVE",
+        "M16": "POSITIVE",
+        "M17": "NEGATIVE",
+        "M18": "POSITIVE",
+        "M19": "NEGATIVE",
+        "M20": "NEGATIVE"
+      },
+      "label_mapping": {
+        "0": "NEG",
+        "1": "POS",
+        "2": "NEU"
+      }
+    },
+    "phobert_onnx_int8": {
+      "metrics": {
+        "accuracy": 0.5833333333333334,
+        "macro_f1": 0.5614870453580131,
+        "negative_precision": 0.5882352941176471,
+        "negative_recall": 0.5,
+        "per_label": {
+          "NEGATIVE": {
+            "precision": 0.5882352941176471,
+            "recall": 0.5,
+            "f1": 0.5405405405405405
+          },
+          "NEUTRAL": {
+            "precision": 0.6363636363636364,
+            "recall": 0.35,
+            "f1": 0.45161290322580644
+          },
+          "POSITIVE": {
+            "precision": 0.5625,
+            "recall": 0.9,
+            "f1": 0.6923076923076923
+          }
+        },
+        "confusion_matrix": {
+          "NEGATIVE": {
+            "NEGATIVE": 10,
+            "NEUTRAL": 2,
+            "POSITIVE": 8
+          },
+          "NEUTRAL": {
+            "NEGATIVE": 7,
+            "NEUTRAL": 7,
+            "POSITIVE": 6
+          },
+          "POSITIVE": {
+            "NEGATIVE": 0,
+            "NEUTRAL": 2,
+            "POSITIVE": 18
+          }
+        },
+        "errors": [
+          {
+            "id": "N01",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N04",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N09",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N10",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N12",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N13",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N14",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N15",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N16",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N17",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N18",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N19",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N20",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "P03",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P08",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M02",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M04",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M06",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M08",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M10",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M13",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M14",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M15",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M16",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M18",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          }
+        ],
+        "error_count": 25,
+        "accuracy_delta_vs_full_precision": 0.0,
+        "macro_f1_delta_vs_full_precision": 0.0013
+      },
+      "latency": {
+        "export_quantize_seconds": 14.63,
+        "session_load_seconds": 0.594,
+        "first_inference_ms": 11.81,
+        "export_cached": false,
+        "p50_ms": 9.32,
+        "p95_ms": 12.06
+      },
+      "quantized_model_bytes": 283829288,
+      "predictions": {
+        "N01": "NEGATIVE",
+        "N02": "NEUTRAL",
+        "N03": "NEUTRAL",
+        "N04": "NEGATIVE",
+        "N05": "NEUTRAL",
+        "N06": "NEUTRAL",
+        "N07": "NEUTRAL",
+        "N08": "NEUTRAL",
+        "N09": "POSITIVE",
+        "N10": "NEGATIVE",
+        "N11": "NEUTRAL",
+        "N12": "POSITIVE",
+        "N13": "POSITIVE",
+        "N14": "POSITIVE",
+        "N15": "NEGATIVE",
+        "N16": "NEGATIVE",
+        "N17": "POSITIVE",
+        "N18": "NEGATIVE",
+        "N19": "POSITIVE",
+        "N20": "NEGATIVE",
+        "P01": "POSITIVE",
+        "P02": "POSITIVE",
+        "P03": "NEUTRAL",
+        "P04": "POSITIVE",
+        "P05": "POSITIVE",
+        "P06": "POSITIVE",
+        "P07": "POSITIVE",
+        "P08": "NEUTRAL",
+        "P09": "POSITIVE",
+        "P10": "POSITIVE",
+        "P11": "POSITIVE",
+        "P12": "POSITIVE",
+        "P13": "POSITIVE",
+        "P14": "POSITIVE",
+        "P15": "POSITIVE",
+        "P16": "POSITIVE",
+        "P17": "POSITIVE",
+        "P18": "POSITIVE",
+        "P19": "POSITIVE",
+        "P20": "POSITIVE",
+        "M01": "NEGATIVE",
+        "M02": "POSITIVE",
+        "M03": "NEGATIVE",
+        "M04": "POSITIVE",
+        "M05": "NEGATIVE",
+        "M06": "POSITIVE",
+        "M07": "NEGATIVE",
+        "M08": "POSITIVE",
+        "M09": "NEGATIVE",
+        "M10": "POSITIVE",
+        "M11": "NEGATIVE",
+        "M12": "NEGATIVE",
+        "M13": "POSITIVE",
+        "M14": "NEUTRAL",
+        "M15": "NEUTRAL",
+        "M16": "POSITIVE",
+        "M17": "NEGATIVE",
+        "M18": "POSITIVE",
+        "M19": "NEGATIVE",
+        "M20": "NEGATIVE"
+      }
+    },
+    "visobert": {
+      "metrics": {
+        "accuracy": 0.5666666666666667,
+        "macro_f1": 0.5361898555446943,
+        "negative_precision": 0.52,
+        "negative_recall": 0.65,
+        "per_label": {
+          "NEGATIVE": {
+            "precision": 0.52,
+            "recall": 0.65,
+            "f1": 0.5777777777777778
+          },
+          "NEUTRAL": {
+            "precision": 0.36363636363636365,
+            "recall": 0.2,
+            "f1": 0.25806451612903225
+          },
+          "POSITIVE": {
+            "precision": 0.7083333333333334,
+            "recall": 0.85,
+            "f1": 0.7727272727272727
+          }
+        },
+        "confusion_matrix": {
+          "NEGATIVE": {
+            "NEGATIVE": 13,
+            "NEUTRAL": 5,
+            "POSITIVE": 2
+          },
+          "NEUTRAL": {
+            "NEGATIVE": 11,
+            "NEUTRAL": 4,
+            "POSITIVE": 5
+          },
+          "POSITIVE": {
+            "NEGATIVE": 1,
+            "NEUTRAL": 2,
+            "POSITIVE": 17
+          }
+        },
+        "errors": [
+          {
+            "id": "N01",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N02",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N03",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N04",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N05",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N06",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N08",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N09",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N10",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N12",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N13",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N15",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N16",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N18",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N19",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N20",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "P06",
+            "expected": "POSITIVE",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "P12",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P20",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M02",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M04",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M06",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M08",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M10",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M13",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M16",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          }
+        ],
+        "error_count": 26
+      },
+      "latency": {
+        "load_seconds": 0.12,
+        "first_inference_ms": 292.58,
+        "p50_ms": 39.09,
+        "p95_ms": 48.23
+      },
+      "checkpoint_bytes": 390297116,
+      "predictions": {
+        "N01": "NEGATIVE",
+        "N02": "NEGATIVE",
+        "N03": "POSITIVE",
+        "N04": "NEGATIVE",
+        "N05": "NEGATIVE",
+        "N06": "NEGATIVE",
+        "N07": "NEUTRAL",
+        "N08": "POSITIVE",
+        "N09": "POSITIVE",
+        "N10": "NEGATIVE",
+        "N11": "NEUTRAL",
+        "N12": "POSITIVE",
+        "N13": "POSITIVE",
+        "N14": "NEUTRAL",
+        "N15": "NEGATIVE",
+        "N16": "NEGATIVE",
+        "N17": "NEUTRAL",
+        "N18": "NEGATIVE",
+        "N19": "NEGATIVE",
+        "N20": "NEGATIVE",
+        "P01": "POSITIVE",
+        "P02": "POSITIVE",
+        "P03": "POSITIVE",
+        "P04": "POSITIVE",
+        "P05": "POSITIVE",
+        "P06": "NEGATIVE",
+        "P07": "POSITIVE",
+        "P08": "POSITIVE",
+        "P09": "POSITIVE",
+        "P10": "POSITIVE",
+        "P11": "POSITIVE",
+        "P12": "NEUTRAL",
+        "P13": "POSITIVE",
+        "P14": "POSITIVE",
+        "P15": "POSITIVE",
+        "P16": "POSITIVE",
+        "P17": "POSITIVE",
+        "P18": "POSITIVE",
+        "P19": "POSITIVE",
+        "P20": "NEUTRAL",
+        "M01": "NEGATIVE",
+        "M02": "POSITIVE",
+        "M03": "NEGATIVE",
+        "M04": "NEUTRAL",
+        "M05": "NEGATIVE",
+        "M06": "NEUTRAL",
+        "M07": "NEGATIVE",
+        "M08": "NEUTRAL",
+        "M09": "NEGATIVE",
+        "M10": "POSITIVE",
+        "M11": "NEGATIVE",
+        "M12": "NEGATIVE",
+        "M13": "NEUTRAL",
+        "M14": "NEGATIVE",
+        "M15": "NEGATIVE",
+        "M16": "NEUTRAL",
+        "M17": "NEGATIVE",
+        "M18": "NEGATIVE",
+        "M19": "NEGATIVE",
+        "M20": "NEGATIVE"
+      },
+      "label_mapping": {
+        "0": "NEG",
+        "1": "POS",
+        "2": "NEU"
+      }
+    },
+    "visobert_onnx_int8": {
+      "metrics": {
+        "accuracy": 0.55,
+        "macro_f1": 0.5345342473032573,
+        "negative_precision": 0.52,
+        "negative_recall": 0.65,
+        "per_label": {
+          "NEGATIVE": {
+            "precision": 0.52,
+            "recall": 0.65,
+            "f1": 0.5777777777777778
+          },
+          "NEUTRAL": {
+            "precision": 0.35714285714285715,
+            "recall": 0.25,
+            "f1": 0.2941176470588235
+          },
+          "POSITIVE": {
+            "precision": 0.7142857142857143,
+            "recall": 0.75,
+            "f1": 0.7317073170731706
+          }
+        },
+        "confusion_matrix": {
+          "NEGATIVE": {
+            "NEGATIVE": 13,
+            "NEUTRAL": 5,
+            "POSITIVE": 2
+          },
+          "NEUTRAL": {
+            "NEGATIVE": 11,
+            "NEUTRAL": 5,
+            "POSITIVE": 4
+          },
+          "POSITIVE": {
+            "NEGATIVE": 1,
+            "NEUTRAL": 4,
+            "POSITIVE": 15
+          }
+        },
+        "errors": [
+          {
+            "id": "N01",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N02",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N03",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N04",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N05",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N06",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N09",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N10",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N12",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N13",
+            "expected": "NEUTRAL",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "N15",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N16",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N18",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N19",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "N20",
+            "expected": "NEUTRAL",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "P06",
+            "expected": "POSITIVE",
+            "predicted": "NEGATIVE"
+          },
+          {
+            "id": "P12",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P15",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P19",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "P20",
+            "expected": "POSITIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M02",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M04",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M06",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M08",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M10",
+            "expected": "NEGATIVE",
+            "predicted": "POSITIVE"
+          },
+          {
+            "id": "M13",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          },
+          {
+            "id": "M16",
+            "expected": "NEGATIVE",
+            "predicted": "NEUTRAL"
+          }
+        ],
+        "error_count": 27,
+        "accuracy_delta_vs_full_precision": -0.0167,
+        "macro_f1_delta_vs_full_precision": -0.0017
+      },
+      "latency": {
+        "export_quantize_seconds": 13.94,
+        "session_load_seconds": 0.37,
+        "first_inference_ms": 10.9,
+        "export_cached": false,
+        "p50_ms": 8.98,
+        "p95_ms": 11.22
+      },
+      "quantized_model_bytes": 134102054,
+      "predictions": {
+        "N01": "NEGATIVE",
+        "N02": "NEGATIVE",
+        "N03": "POSITIVE",
+        "N04": "NEGATIVE",
+        "N05": "NEGATIVE",
+        "N06": "NEGATIVE",
+        "N07": "NEUTRAL",
+        "N08": "NEUTRAL",
+        "N09": "POSITIVE",
+        "N10": "NEGATIVE",
+        "N11": "NEUTRAL",
+        "N12": "POSITIVE",
+        "N13": "POSITIVE",
+        "N14": "NEUTRAL",
+        "N15": "NEGATIVE",
+        "N16": "NEGATIVE",
+        "N17": "NEUTRAL",
+        "N18": "NEGATIVE",
+        "N19": "NEGATIVE",
+        "N20": "NEGATIVE",
+        "P01": "POSITIVE",
+        "P02": "POSITIVE",
+        "P03": "POSITIVE",
+        "P04": "POSITIVE",
+        "P05": "POSITIVE",
+        "P06": "NEGATIVE",
+        "P07": "POSITIVE",
+        "P08": "POSITIVE",
+        "P09": "POSITIVE",
+        "P10": "POSITIVE",
+        "P11": "POSITIVE",
+        "P12": "NEUTRAL",
+        "P13": "POSITIVE",
+        "P14": "POSITIVE",
+        "P15": "NEUTRAL",
+        "P16": "POSITIVE",
+        "P17": "POSITIVE",
+        "P18": "POSITIVE",
+        "P19": "NEUTRAL",
+        "P20": "NEUTRAL",
+        "M01": "NEGATIVE",
+        "M02": "POSITIVE",
+        "M03": "NEGATIVE",
+        "M04": "NEUTRAL",
+        "M05": "NEGATIVE",
+        "M06": "NEUTRAL",
+        "M07": "NEGATIVE",
+        "M08": "NEUTRAL",
+        "M09": "NEGATIVE",
+        "M10": "POSITIVE",
+        "M11": "NEGATIVE",
+        "M12": "NEGATIVE",
+        "M13": "NEUTRAL",
+        "M14": "NEGATIVE",
+        "M15": "NEGATIVE",
+        "M16": "NEUTRAL",
+        "M17": "NEGATIVE",
+        "M18": "NEGATIVE",
+        "M19": "NEGATIVE",
+        "M20": "NEGATIVE"
+      }
+    }
+  }
+}
